@@ -2,7 +2,7 @@
   "name": "books_for_all",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sa8tyajeet46.github.io/react-gh-pages",
+  "homepage": "https://sa8tyajeet46.github.io/books_for_all",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
