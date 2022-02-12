@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Nav from './Nav'
 import Bodie from './Bodie';
+import Foot from './Foot';
 
 ReactDOM.render(
   <div>
 <Nav />
 <Bodie />
+<Foot />
 </div>,
   document.getElementById('root')
 );

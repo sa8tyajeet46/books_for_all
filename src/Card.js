@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import Show from './Comment';
+import {Routes,Link,Route,BrowserRouter} from 'react-router-dom';
 export default function Card(props){
     const [k,setk]=useState(props.like);
     const [d,setd]=useState(props.dislike);
@@ -34,9 +36,15 @@ export default function Card(props){
         <img src={props.src} width="100%" height="100%"></img>
         </div>
         <p className="title">{props.title}</p>
-        <p><button className='right' onClick={increase}><i class="fas fa-thumbs-up">le</i></button><span >{k}</span>
-        <button className='wrong' onClick={decrease}><i class="fas fa-thumbs-down">ke</i></button><span >{d}</span></p>
-        <button className='down' ><i class="fas fa-file-download"></i></button>
+        <p><button className='right' onClick={increase}><i class="fas fa-thumbs-up"></i></button><span >{k}</span>
+        <button className='wrong' onClick={decrease}><i class="fas fa-thumbs-down"></i></button><span >{d}</span></p>
+        <BrowserRouter>
+       <button className='down' >DOWNLOAD</button>
+        <Link className="co" to="/comment">Leave Comment</Link>
+    <Routes>
+        <Route path="/comment" element={<Show />}></Route>
+    </Routes>
+        </BrowserRouter>
     </div>
     );
 }
