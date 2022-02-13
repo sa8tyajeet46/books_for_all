@@ -30,16 +30,20 @@ export default function Card(props){
             setd(props.dislike);
         }
     }
+    function de()
+    {
+      window.location.href=props.ink;
+    }
     return(
     <div className="container">
         <div className='imgcontainer'>
-        <img src={props.src} width="100%" height="100%"></img>
+        <img src={props.src} alt="book image" width="100%" height="100%"></img>
         </div>
         <p className="title">{props.title}</p>
         <p><button className='right' onClick={increase}><i class="fas fa-thumbs-up"></i></button><span >{k}</span>
         <button className='wrong' onClick={decrease}><i class="fas fa-thumbs-down"></i></button><span >{d}</span></p>
         <BrowserRouter>
-       <button className='down' >DOWNLOAD</button>
+       <button className='down' onClick={de} >DOWNLOAD</button>
         <Link className="co" to="/comment">Leave Comment</Link>
     <Routes>
         <Route path="/comment" element={<Show />}></Route>
